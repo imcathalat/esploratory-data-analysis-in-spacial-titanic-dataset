@@ -129,3 +129,13 @@ As linhas de dados que possuem valores nulos nas seguintes colunas: CryoSleep, H
 ```python
 initial_df.dropna(subset=["CryoSleep", "HomePlanet", "Cabin"])
 ```
+
+## Handling with Outliers
+O dataset que identifica os passageiros do Spaceship Titanic são em sua maioria categóricos, não tendo portanto Outliers. No entanto é possível fazer um estudo para identificar passageiros que mais gastaram com serviços pagos de luxo dentro da espaçonave e também é possível e útil identificar as frequências em que as variável categórica aparece a fim de obter maior entedimento a cerca dos dados.
+
+### Análise de quanto gastou cada passageiro
+
+
+
+
+#### Obtendo Frequência dos passageiros que estavam se deslocando para 
