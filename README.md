@@ -79,4 +79,28 @@ Identificar padrões no dataset que me permita **inferir sobre os motivos de um 
 - Cálculo do p-valor para afirmar ou refutrar hipótese nula
 
 
+# Start EDA
 
+## Duplicated Values
+
+```python
+duplicated_data = initial_df[initial_df.duplicated(['HomePlanet', 'CryoSleep', 'Cabin', 'Destination', 'Age', 'VIP', 'Name', 'Transported'])]
+duplicated_data.head()
+
+initial_df.index.is_unique
+True
+```
+
+O comportamento do método .head() ao mostrar nenhum dado duplicado e o retorno True da afirmativa is_unique identifica que não há dados duplicados no dataset.
+
+## Missing Values
+```python
+total_null = initial_df.isnull().sum>sort_values(ascending=False)
+total_null
+
+total_null.plot(kind="bar", figsize = (8, 6), fontsize = 10)
+plt.xlabel("Features", fontsize = 20)
+plt.ylabel("Count", fontsize = 20)
+plt.title("Total Missing Values", fontsize = 20)
+```
+Gráfico quantos valores nulos há em cada conjunto de variáveis.
