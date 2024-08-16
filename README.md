@@ -103,4 +103,29 @@ plt.xlabel("Features", fontsize = 20)
 plt.ylabel("Count", fontsize = 20)
 plt.title("Total Missing Values", fontsize = 20)
 ```
-Gráfico quantos valores nulos há em cada conjunto de variáveis.
+![](total_missing_values.png)
+
+Este é um gráfico de barra que representa quantos valores nulos existem em cada conjunto de dados de uma feature. Para ser mais preciso, faltam a seguinte quantidade pra cada featrure:
+```python
+CryoSleep       217
+ShoppingMall    208
+VIP             203
+HomePlanet      201
+Name            200
+Cabin           199
+VRDeck          188
+FoodCourt       183
+Spa             183
+Destination     182
+RoomService     181
+Age             179
+PassengerId       0
+Transported       0
+dtype: int64
+```
+
+As linhas de dados que possuem valores nulos nas seguintes colunas: CryoSleep, HomePlanet e Cabin **foram apagadas**, pois são informações que possuem potencial caráter preditivo sobre a variável target. Além disso, são dados categóricos, o que dificulta a substituição por valores constantes que poderiam introduzir vieses ou ruído no modelo.
+
+```python
+initial_df.dropna(subset=["CryoSleep", "HomePlanet", "Cabin"])
+```
