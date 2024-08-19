@@ -198,9 +198,12 @@ Name: count, dtype: int64
 ```
 
 ### Análise da Correlação entre Transported e CryoSleep
+![](correlation_features.png)
 
-![]('correlation_features.png')
-O gráfico nos indica que a variável CryoSleep e a variável Transported são as que mais possuem correlação entre as exibida.
+O gráfico nos indica, através da correlação de **Cramér's V** que a variável CryoSleep e a variável Transported são as que mais possuem correlação entre as exibida.
+
+### Passageiros Transported e sua relação com a Cabine e o CryoSleep
+
 
 
 
