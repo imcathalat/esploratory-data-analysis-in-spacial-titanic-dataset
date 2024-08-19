@@ -141,3 +141,67 @@ O gráfico mostra que os passageiros que consumiram mais que 5000 em serviços o
 ## Identificando Correlação entre as features
 
 #### Análise de frequência das features
+
+```python
+# Quantidade de passageiros transportados
+initial_df['Transported'].value_counts()
+
+Transported
+True     4378
+False    4315
+Name: count, dtype: int64
+
+# Passageiros de cada HomePlanet
+initial_df['HomePlanet'].value_counts()
+
+HomePlanet
+Earth     4602
+Europa    2131
+Mars      1759
+Name: count, dtype: int64
+
+# Passageiros que estavam no CryoSleep
+initial_df['CryoSleep'].value_counts()
+
+CryoSleep
+False    5439
+True     3037
+Name: count, dtype: int64
+
+# Passageiros em cada cabine
+count_P = initial_df['Cabin'].str.endswith('P').sum()
+count_P
+
+4206
+
+count_S = initial_df['Cabin'].str.endswith('S').sum()
+count_S
+
+4288
+
+# Passageiros VIP
+initial_df['VIP'].value_counts()
+
+VIP
+False    8291
+True      199
+Name: count, dtype: int64
+
+# Destination
+initial_df['Destination'].value_counts()
+
+Destination
+TRAPPIST-1e      5915
+55 Cancri e      1800
+PSO J318.5-22     796
+Name: count, dtype: int64
+```
+
+### Análise da Correlação entre Transported e CryoSleep
+
+![]('correlation_features.png')
+O gráfico nos indica que a variável CryoSleep e a variável Transported são as que mais possuem correlação entre as exibida.
+
+
+
+
