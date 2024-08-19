@@ -202,7 +202,26 @@ Name: count, dtype: int64
 
 O gráfico nos indica, através da correlação de **Cramér's V** que a variável CryoSleep e a variável Transported são as que mais possuem correlação entre as exibida.
 
-### Passageiros Transported e sua relação com a Cabine e o CryoSleep
+### Passageiros Transported e sua relação com a Cabine S e o CryoSleep
+
+![](cabinScryoSleep.png)
+![](cabinPcryoSleep.png)
+
+O primeiro gráfico nos mostra que a relação mais forte é a de passageiros 
+que foram transportados que estavam na Cabine S e no CryoSleep.
+Passageiros que foram transportados, porém não estavam na CabineS e não estavam 
+no CryoSleep foram menos de 800.
+
+Já o gráfico a esquerda cque relacionada a cabine P ao CryoSleepp reforça
+o primeiro gráfico, pois a maior relação acontece quando o passageiro é transportado
+e esta no CryoSleep, porém não esta na cabine P.
+
+Há cerca de 1100 passageiros que estão no CryoSleep e são transportados independente da cabine.
+Tal constatação nos indica que há maior probabilidade de ser transportado estando no cryoSleep
+e que a cabine talvez seja uma variavel correlata mais distante.
+
+![](venn_cs_transported_cabinS.png)
+![](venn_cs_transported_cabinP.png)
 
 
 
